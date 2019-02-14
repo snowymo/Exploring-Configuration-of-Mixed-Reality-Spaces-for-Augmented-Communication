@@ -77,7 +77,7 @@
   %Abstracts should be about 150 words. Required.
   
   \karlZhenyiEdits {
-  Mixed Reality (MR) enables users to explore a wonderland which is not realizable in the physical world. This provides users with the chance to communicate with each other with the help of digital content. We present our MR multi-user workstation system to investigate how different configurations of participants and content affect communication between people in the same immersive environment. We designed and implemented side-by-side, mirrored face-to-face and eyes-free configurations in our multi-user MR environment. We have conducted a preliminary user study for our mirrored face-to-face configuration, evaluating with respect to one-to-one interaction, smooth focus shifts, and eye contact, by giving a 3D presentation using the interactive software, Chalktalk. We provide experimental results and interview responses.
+  Mixed Reality (MR) enables users to explore scenarios not realizable in the physical world. This allows users to communicate with the help of digital content. We investigate how different configurations of participants and content affect communication in a shared immersive environment. We designed and implemented side-by-side, mirrored face-to-face and eyes-free configurations in our multi-user MR environment and conducted a preliminary user study for our mirrored face-to-face configuration, evaluating with respect to one-to-one interaction, smooth focus shifts and eye contact within a 3D presentation using the interactive Chalktalk system. We provide experimental results and interview responses.
   }
   
 \end{abstract}
@@ -87,13 +87,14 @@
 
 \begin{marginfigure}
     \includegraphics[width=\marginparwidth]{configurations}
-    \caption{Three Configurations For MR Communication}
+    \caption{Three Configurations For MR Communication.\newline Inspiration for Configurations:\newline
+1) side-by-side whiteboard brainstorming\newline 
+2) daily face-to-face conversations\newline
+3) drafting boards}
+
     \label{fig:config}
 \end{marginfigure}
 
-%\begin{sidebar}
-%\keywords{mixed reality; communication}
-%\end{sidebar}
 
 \begin{margintable}
 \vspace{1cm}
@@ -101,7 +102,6 @@
 \textbf{KEYWORDS}\\
 Mixed reality; communication; collaboration;
 \end{margintable}
-
 \maketitle
 
 
@@ -133,18 +133,18 @@ Mixed reality; communication; collaboration;
 
 Virtual Reality and Mixed Reality (VR, MR) are being explored increasingly, spurred by the availability of high quality consumer headsets in recent years. VR and MR enable rich design spaces in HCI by providing 3D input and immersive experiences. Decades ago, the "Office of the future" was proposed to allow remotely located people to feel as though they were together in a shared office space~\cite{raskar1998office}, via a hybrid of modalities including telepresence, large panoramic displays and shared manipulation of 3D objects. The core idea was that VR/MR had the potential to enhance communication among groups of people. Since then, significant progress has been made in exploring techniques for communication ~\cite{ishii1993integration, otsuka2016mmspace}. However, less studied is the configuration (see our full definition in table~\ref{tab:table1}) of people and shared manipulable objects in the environment, which may lead to different communication experiences.
 
-In daily life while speaking to others, we commonly use gestures or visual aids to help ourselves present ideas. We might use gestures subconsciously or purposely. Visual aids can be drawn on paper, a whiteboard, or a shared screen (via video chat). A key task for participants in a conversation is the shifting of focus between other participants' spoken words, gestures and visual aids such as notes and drawings. Smooth transitions in conversations have been found to be important for collaboration~\cite{buxton1992telepresence}.
-Prior works addressed this with alternative configurations of spaces for communication. Tan et al. built a face-to-face presentation system for remote audiences ~\cite{gazeAwareness}. ClearBoard~\cite{ishii1993integration} created a shared workspace, in which two users can collaborate remotely without losing some of the advantages of in-person face-to-face interactions. For example, one such advantage relates to learning. When a teacher looks away from the audience, Lanir et al. ~\cite{Lanir2008ClassroomPresentationSoftware} observed that audiences in a classroom would not focus on the presenter, which might "create a learning environment in which there is no interpersonal engagement between the presenter and the audience, thus reducing learning outcomes." 
+In daily life while speaking to others, we commonly use gestures or visual aids to help present ideas, either subconsciously or purposefully. Visual aids can be drawn on paper, a whiteboard, or a screen via video chat. A key task for collaborators is the shifting of focus between spoken words, gestures and visual aids such as notes and drawings. Smooth transitions in conversations have been found to be important for collaboration~\cite{buxton1992telepresence}.
+Prior work addressed this with alternative configurations of spaces for communication. Tan et al. built a face-to-face presentation system for remote audiences ~\cite{gazeAwareness}. ClearBoard~\cite{ishii1993integration} created a shared workspace in which two users collaborate remotely without losing all the advantages of in-person face-to-face interactions. One such advantage relates to learning. When a teacher looks away from the audience, Lanir et al. ~\cite{Lanir2008ClassroomPresentationSoftware} observed that audiences in a classroom would not focus on the presenter, which might "create a learning environment in which there is no interpersonal engagement between the presenter and the audience, thus reducing learning outcomes." 
 We find that personal engagement, such as one-to-one interaction and eye contact~\cite{InsaPositionInClassroom}, in addition to focus shift~\cite{buxton1992telepresence}, is therefore relevant to evaluating communication experiences.
 
-Still, it is unclear how the configuration of users and content in an MR space affects the communication experience for co-located and distant people.
-We have implemented a multi-user MR workstation to explore how configuration impacts communication by providing three different configurations: (1) side-by-side, (2) mirrored face-to-face and (3) eyes-free. We conducted a preliminary user-study of our mirrored face-to-face configuration in which participants experienced a presentation in our system.
+Still, it is unclear how the configuration of users and content in an MR space affects communication for co-located and distant people.
+We have implemented a multi-user MR workstation to explore how configuration impacts communication by providing three different configurations: 1) side-by-side, 2) mirrored face-to-face and 3) eyes-free. We conducted a preliminary user-study of the mirrored face-to-face configuration.
 Afterwards, we proceeded to user interviews in which participants spoke about the face-to-face experience, one-to-one interaction, focus shift and eye contact. %And describe plans for future research, which include user-studies for each configuration, as well as comparing the configurations.
 
 \section{Related Work}
-Quite a few works have contributed to collaborative applications in VR/MR. T(ether) is a spatially-aware display system for co-located collaborative manipulation and animation of objects ~\cite{lakatos2014t}. By attaching trackable markers to pads and digital gloves, people can use gestures to manipulate objects in space. Virtual Replicas for Remote Assistance is a remote collaboration system, allowing a remote expert to guide local users to assemble machine parts by using virtual replicas~\cite{oda2015virtual}.
-SpaceTime is a scene editing tool designed for multi-user collaboration in VR, either co-located or remote~\cite{xia2018spacetime}. To support conflict resolution in the case where two users wish to work on the same object simultaneously, it created per-user branches of the object, which could later be merged. 
-As opposed to enhancing experiences related to specific tasks, our system aims to enhance the experience of general communication, which can benefit various kinds of more specific collaborative work.
+Much work has been done in collaborative applications in VR/MR. T(ether) is a spatially-aware display system for co-located collaborative manipulation and animation of objects ~\cite{lakatos2014t}. Trackable markers on pads and digital gloves allow participants to use gestures to manipulate objects in space. Virtual Replicas for Remote Assistance is a remote collaboration system, allowing a remote expert to guide local users to assemble machine parts by using virtual replicas~\cite{oda2015virtual}.
+SpaceTime is a scene editing tool supporting multi-user collaboration in VR, either co-located or remote~\cite{xia2018spacetime}. To support conflict resolution when two users wish to work on the same object simultaneously, SpaceTime creates per-user branches of the object, which can later be merged. 
+Rather than enhancing experiences for specific tasks, our system aims to enhance the experience of general communication, which can benefit various kinds of more specific collaborative work.
 
 %TODO bolden the outline for content creation server
 \begin{marginfigure}
@@ -156,7 +156,7 @@ As opposed to enhancing experiences related to specific tasks, our system aims t
 %   Chalktalk's content ("sketches") is is composed of graphical elements such as point data. In the Chalktalk client we serialize all sketch data(1) into a data array(2), which is sent to the Chalktalk server, then (3) to the Holojam relay. The Holojam relay multicasts the data array(4) to all Unity clients. The clients de-serialize and parse the array into render data(5) that are displayed on MR content board(s). MR user input data(6) on the Unity client-side is also transformed and sent back through the Holojam relay and Chalktalk server to the Chalktalk client. The Chalktalk client then translates the input data(7) into HTML canvas mouse events that it understands. Unity clients can see each other correctly by synchronizing avatar data(8).
  
  
- Chalktalk's content ("sketches") is composed of graphical elements such as point data. (1) Sketch data are serialized on the Chalktalk client side every frame and (2) sent as a data array to the Chalktalk server, (3) to the Holojam relay, and then (4) to all Unity clients, where (5) the data are parsed into render data for display on content board(s). MR user input is sent back through the pipeline to the Chalktalk client and translated into HTML canvas mouse events that it understands. (8) Avatar synchronization data are also sent between clients using the Holojam relay.
+ Chalktalk's content ("sketches") is composed of graphical elements such as point data. 1) Sketch data are serialized on the Chalktalk client side every frame and 2) sent as a data array to the Chalktalk server, 3) to the Holojam relay, and then 4) to all Unity clients, where 5) the data are rendered on content board(s). 6) MR user input is sent back through the pipeline to the Chalktalk client and 7) translated into HTML canvas mouse events. 8) Avatar synchronization data are also sent between clients using the Holojam relay.
  
   
   %Users can control Chalktalk from within the MR environment without needing Chalktalk to know the specifics of Unity or of the VR device. 
@@ -166,24 +166,33 @@ As opposed to enhancing experiences related to specific tasks, our system aims t
 \end{sidebar}
 
 Some previous work contributed to communication in VR/MR too. ClearBoard allows a pair of users to shift easily between interpersonal space and a shared workspace~\cite{ishii1993integration}.
-The key metaphor of the ClearBoard design is ``talking through and drawing on a big transparent glass board.'' No gaze or eye contact information is lost while working on the content. ShareVR enables communication between an HMD user and a non-HMD user~\cite{gugenheimer2017sharevr}. By using floor projection and mobile displays to visualize the virtual world, the non-HMD user is able to interact with the HMD user and become part of the VR experience. The work discusses how people with different devices communicate with each other. MMSpace allows face-to-face social interactions and telepresence in the context of small group remote conferences~\cite{otsuka2016mmspace}. To achieve this, the system uses custom-built mechanical displays on which images of remote participants are projected, and which move in response to users' movements. Pairs of participants can maintain eye contact with each other and remain aware of each other's focus. Instead of designing a configuration to fit one specific communication use case, we provide three different configurations for general-purpose communication in VR/MR.
+The key metaphor of ClearBoard is ``talking through and drawing on a big transparent glass board.'' No gaze or eye contact information is lost while working on the content. ShareVR enables communication between an HMD user and a non-HMD user~\cite{gugenheimer2017sharevr}. By using floor projection and mobile displays to visualize the virtual world, the non-HMD user is able to interact with the HMD user and become part of the VR experience. The work discusses how people with different devices communicate with each other. MMSpace allows face-to-face social interactions and telepresence in the context of small group remote conferences~\cite{otsuka2016mmspace}. It uses custom-built mechanical displays on which images of remote participants are projected, and which move in response to users' movements. Pairs of participants can maintain eye contact with each other and remain aware of each other's focus. Instead of designing a configuration to fit one specific communication use case, we provide three different configurations for general-purpose communication in VR/MR.
 
 
 \section{Detailed design and implementation}
 
 \textit{Three Configuration Designs.}
-We implemented three \textit{configurations} for communication in our system: 1) side-by-side, 2) mirrored face-to-face and 3) eyes-free (see figure~\ref{fig:config}). 
-For 1), we implemented it by placing users facing a \textit{content board} (see full definition in table~\ref{tab:table1}) from the same side.
+We implemented three \textit{configurations} for communication in our system: 1) side-by-side, 2) mirrored face-to-face and 3) eyes-free (see figure~\ref{fig:config}).
+For 1), our implementation has users facing a \textit{content board} (see full definition in table~\ref{tab:table1}) from the same side.
 
-For 2), the users are face-to-face in the virtual environment with the content board placed between them, so that each sees the other on the opposite side of the content board, left-right flipped as if reflected in a mirror.
-For a regular face-to-face configuration, the problem is that the content will be left-right reversed on one side of the board. For example, text will be illegible
+% For 2), the users are face-to-face in the virtual environment with the content board placed between them, so that each sees the other on the opposite side of the content board, left-right reversed as if reflected in a mirror. Mirror reversal allows, for example, text to be readable for both participants.
+% %and asymmetric objects will appear differently on one side. 
+% The challenge is ensuring all the content is consistent
+% %and legible 
+% for everyone on each side of the board.
+
+
+%revised order
+For 2), the users are face-to-face in the virtual environment with the content board placed between them, so that each sees the other on the opposite side of the content board, left-right reversed as if reflected in a mirror.
 %and asymmetric objects will appear differently on one side. 
 The challenge is ensuring all the content is consistent
 %and legible 
-for everyone on each side of the board. ClearBoard~\cite{ishii1993integration} implemented "mirror reversal" via video capture and projection techniques to solve a similar problem for 2D displays. Inspired by that, we implemented a 3D immersive mirror reversal for our MR configuration. We place the users physically
+for everyone on each side of the board. Mirror reversal allows, for example, text to be readable and asymmetric objects to appear correct for each participant.
+ClearBoard~\cite{ishii1993integration} implemented "mirror reversal" via video capture and projection techniques to solve a similar problem for 2D displays. Inspired by that, we implemented a 3D immersive mirror reversal for our MR configuration. We place the users physically
 %(in the real world) 
-on the same side of the content board and mirror all other users (from one user's perspective) to the other side. This way, we retain the correct format of the content and face-to-face information including gaze direction and hand position (see figure~\ref{fig:marginfig:mirror}).
-
+on the same side of the content board and mirror all other users (from one user's perspective) to the other side.
+% This way, we retain the correct format of the content and face-to-face information including gaze and gesture direction (see figure~\ref{fig:marginfig:mirror}). I FIND THIS SENTENCE CONFUSING -KEN
+This way, information such as gaze and gesture direction is preserved, so participants can know where each other is looking and pointing (see figure~\ref{fig:marginfig:mirror}).
 %: person A is drawing a coordinate system with his right hand on the left side of the content board from his perspective, whereas person B sees person A drawing with the left hand. The content of the drawing appears the same way to both of them.
 
 \begin{marginfigure}
@@ -201,7 +210,7 @@ on the same side of the content board and mirror all other users (from one user'
 
 For 3), instead of writing or drawing in mid-air, users can create content in MR
 %by writing 
-while resting their arms atop a horizontal surface in the real world (e.g. table). Being able to rest one's arms on a surface counteracts the potential fatigue of drawing in mid-air without support for long periods of time. For this configuration, we now have two boards in the MR world: a horizontal drafting board used for writing and drawing, and a vertical board that displays all information for the entire group to see. All content is duplicated onto the vertical board, and we display a cursor on the vertical board corresponding to the position of the user's hand on the horizontal board. This way, the person using the horizontal board need not look downwards and is free to look at the vertical content board and other people in the group. Freeing users from focusing on the drawing surface allows users to pay more attention to the environment and each other in a shared experience. This configuration can extend 1) and 2) since we can choose where to place the vertical duplicate board.
+while resting their arms atop a horizontal surface in the real world (e.g. table), thereby avoiding the potential fatigue of drawing in mid-air for long periods of time. For this configuration, we now have two boards in the MR world: a horizontal drafting board used for writing and drawing, and a vertical board that displays all information seen by all collaborators. All content is duplicated onto the vertical board. A cursor on the vertical board corresponds to the position of the user's hand on the horizontal board. This way, the person using the horizontal board need not look downward, remaining free to look at the vertical content board and other people. This frees users to pay more attention to the environment and each other in a shared experience. The configuration can extend 1) and 2) since we can choose where to place the vertical duplicate board.
 
 \textit{The MR System.} Our system comprises 1) a content creation server, 2) an internal network framework and 3) VR/MR clients (see figure~\ref{fig:datapipeline} for a detailed description). 1) To enable interactive content during communication, we chose Chalktalk as our content creation server (see figure~\ref{fig:expMatrix}). Chalktalk is a web browser-based 3D presentation and communication tool, 
 %written in JavaScript, 
@@ -219,25 +228,24 @@ It synchronizes data across devices and supports custom data formats.
 \begin{marginfigure}
     \includegraphics[height = 2.5cm]{3d.png}
     \includegraphics[height = 2.5cm]{experimentMatrix.png}
-    \caption{Left: The content board is 3D. Right: Screenshot from experiment with matrix presentation.}
+    \caption{Left: The content board is 3D. Right: screenshot from experiment with matrix presentation.}
     \label{fig:expMatrix}
 \end{marginfigure}
 
-We plan to conduct experiments for each configuration design and to compare the configurations. So far, we have completed a preliminary user study on our mirrored face-to-face configuration.
-The user study was conducted with 8 participants (F=4) between the ages of 22 and 26 (M=23.71, SD=1.50), recruited via email and word-of-mouth.
+We plan to conduct experiments for each configuration design and to compare the configurations. So far, we have completed a preliminary user study on our mirrored face-to-face configuration, conducted with 8 participants (F=4) between the ages of 22 and 26 (M=23.71, SD=1.50), recruited via email and word-of-mouth.
 %, including undergraduate and graduate computer science and art students from New York University studying either Computer Science or Art and Design. 
-The participants were required to have taken a linear algebra class and to have experience with VR/MR. First, we introduced Chalktalk to participants who were unfamiliar with it to reduce the novelty effect. Afterwards, we gave a presentation on matrix transformations (a concept in the computer graphics curriculum, see figure~\ref{fig:expMatrix} and sidebar ~\ref{sidebar:matrix}) using our system in the mirrored face-to-face configuration. For each session, we have 1 presenter and 2 audience, all are placed physically remote. The presentation were repeated 4 times for 8 participants at all. 
+Participants were required to have taken a linear algebra class and to have prior experience with VR/MR. First, we introduced Chalktalk to participants who were unfamiliar with it to reduce the novelty effect. Then we gave a presentation on matrix transformations (a concept in the computer graphics curriculum, see figure~\ref{fig:expMatrix} and sidebar ~\ref{sidebar:matrix}) using our system in the mirrored face-to-face configuration. For each session, we had 1 presenter and 2 study participants in the audience, all physically remote. The presentation was repeated 4 times for 8 participants in all.
 %\karl{To create a realistic presentation, we invited a computer graphics professor to present a lesson on matrices, and he permitted us to use his presentation as the basis for our experiment (see the rationale for our choice in topic and the steps in the presentation in sidebar ~\ref{sidebar:matrix}). }
-We ran the experience with Oculus Rift headsets. Upon the completion of all sessions, participants answered a questionnaire that gauged their opinions on one-to-one interaction~\cite{Lanir2008ClassroomPresentationSoftware}, eye contact~\cite{InsaPositionInClassroom} and focus shift~\cite{buxton1992telepresence} during the experience. Participants then joined a semi-structured exit interview. All factors were evaluated using the 7-pt Likert scale. The study was recorded with users' permission.
+We ran the experience with Oculus Rift headsets. Upon completion of all sessions, participants answered a questionnaire that gauged their opinions on one-to-one interaction~\cite{Lanir2008ClassroomPresentationSoftware}, eye contact~\cite{InsaPositionInClassroom} and focus shift~\cite{buxton1992telepresence} during the experience. Participants then joined a semi-structured exit interview. All factors were evaluated using the 7-pt Likert scale. The study was recorded with users' permission.
 
 % We chose the topic of matrix transformations so participants could see and interact with 3D moving content. For content within the 3D immersive environment, we chose visualization of the way a matrix translates and rotates geometry. To create a realistic presentation, we invited a computer graphics professor at our university to present on the subject (see detailed steps in sidebar~\ref{sidebar:matrix}), and he permitted us to use a recording of this sample presentation as the basis for our experiment. During the experiment, the presenter also made gestures and moved content around the MR space.
 
 \begin{sidebar}
-To create a realistic presentation, we invited a computer graphics professor to present a lesson on matrices, and he permitted us to use his presentation as the basis for our experiment.
+To create a realistic presentation, we invited a computer graphics professor to present a lesson on matrices. He permitted us to use his presentation as the basis for our experiment.
 We chose the topic of matrix transformations so participants could see and interact with 3D moving content. 
 For content within the 3D immersive environment, we chose visualization of the way a matrix translates and rotates geometry. 
 %To create a realistic presentation, we invited a computer graphics professor at our university to present on the subject, and he permitted us to use a recording of this sample presentation as the basis for our experiment. During the experiment, the presenter also made gestures and moved content around the MR space.
-During the matrix lecture, the presenter demonstrated matrix transformations, including translation and rotation, by using 3D interactive visualizations from the content server. Then she showed that matrix operations are non-commutative.
+During the lecture the presenter demonstrated matrix transformations, including translation and rotation, by using 3D interactive visualizations from the content server. Then she showed that matrix operations are non-commutative.
 The following lists the steps in the presentation:
 \begin{enumerate}
   \item The presenter creates a 4x4 matrix object and links it to geometry. 
@@ -254,7 +262,7 @@ The following lists the steps in the presentation:
 The three main discussion topics during the post-test interviews were "the feeling of one-to-one," "ability to shift focus smoothly" and "eye contact" (see questions in Table~\ref{tab:table2} and results in Figure~\ref{fig:results}). 
 
 \textit{One-to-one Experience.}
-Most participants felt that the face-to-face experience created a feeling of one-to-one interaction with the presenter (6/8 agree or strongly agree).
+Most participants felt the face-to-face experience created a feeling of one-to-one interaction with the presenter (6/8 agree or strongly agree).
 % TODO, despite the presence of another (non-rendered) audience member.
 P1(F): ``\textit{It felt like it was a one-on-one lesson even though there was more than one person there. It felt like the person [the presenter] was right in front of me.}''
 P1(F) contrasted the experience with a college lecture format in which the lecturer stands to the side, which she considered ``\textit{more distant.}'' 
@@ -284,7 +292,7 @@ Participants also thought the face-to-face format helped them concentrate during
 
 We have presented our ongoing work, a multi-user MR system for communication. We designed three configurations for MR communication and evaluated the mirrored face-to-face configuration with respect to one-to-one interaction, smooth focus shifts and eye contact.
 %   With regard to eye-contact, users usually didn't want to lock eyes with the presenter, although they seemed to appreciate the face-to-face aspect. This may be because the content was more often the center of attention in our particular experiment.
-The preliminary study suggests that the face-to-face configuration has the potential to facilitate a feeling of one-to-one collaboration. Participants responded positively to being given attention and feeling as though they were working directly with the lecturer. Positioning the presenter in-front helped some participants concentrate.%on the presentation.
+The preliminary study suggests that the face-to-face configuration facilitates a feeling of one-to-one collaboration. Participants responded positively to being given attention and feeling as though they were working directly with the lecturer. Positioning the presenter in-front helped some participants concentrate.%on the presentation.
 
 In the near future, we plan to conduct multiple user studies in which we will compare side-by-side, mirrored face-to-face and eyes-free configurations. We will 
 investigate which configurations are best suited to communication experiences involving presentations, group discussions and collaborative tasks. Additional questions remain to be explored. For example, how does the feeling of one-to-one interaction change with the configuration of the users and content?
@@ -320,7 +328,7 @@ investigate which configurations are best suited to communication experiences in
 \end{margintable}
 
 \begin{marginfigure}
-    \includegraphics[width=\marginparwidth]{lbwResults}
+    \includegraphics[width=\marginparwidth]{lr}
     \caption{Results for Questionnaire. Each dot $\left(\cdot\right)$ represents one participant on a 7-point Likert scale.}
     \label{fig:results}
 \end{marginfigure}
