@@ -87,9 +87,9 @@
 
 \begin{marginfigure}
     \includegraphics[width=\marginparwidth]{configurations}
-    \caption{Three Configurations For MR Communication.\newline Inspiration for Configurations:\newline
-1) side-by-side whiteboard brainstorming\newline 
-2) daily face-to-face conversations\newline
+    \caption{Three Configurations for MR Communication. \\Inspiration for configurations:
+1) side-by-side whiteboard brainstorming, 
+2) daily face-to-face conversations and
 3) drafting boards}
 
     \label{fig:config}
@@ -189,10 +189,8 @@ The challenge is ensuring all the content is consistent
 %and legible 
 for everyone on each side of the board. Mirror reversal allows, for example, text to be readable and asymmetric objects to appear correct for each participant.
 ClearBoard~\cite{ishii1993integration} implemented "mirror reversal" via video capture and projection techniques to solve a similar problem for 2D displays. Inspired by that, we implemented a 3D immersive mirror reversal for our MR configuration. We place the users physically
-%(in the real world) 
-on the same side of the content board and mirror all other users (from one user's perspective) to the other side.
-% This way, we retain the correct format of the content and face-to-face information including gaze and gesture direction (see figure~\ref{fig:marginfig:mirror}). I FIND THIS SENTENCE CONFUSING -KEN
-This way, information such as gaze and gesture direction is preserved, so participants can know where each other is looking and pointing (see figure~\ref{fig:marginfig:mirror}).
+%(in the real world)
+on the same side of the content board and mirror all other users (from one user's perspective) to the other side. This way, information such as gaze and gesture direction is preserved, so participants can know where each other is looking and pointing (see figure~\ref{fig:marginfig:mirror}).
 %: person A is drawing a coordinate system with his right hand on the left side of the content board from his perspective, whereas person B sees person A drawing with the left hand. The content of the drawing appears the same way to both of them.
 
 \begin{marginfigure}
@@ -210,7 +208,7 @@ This way, information such as gaze and gesture direction is preserved, so partic
 
 For 3), instead of writing or drawing in mid-air, users can create content in MR
 %by writing 
-while resting their arms atop a horizontal surface in the real world (e.g. table), thereby avoiding the potential fatigue of drawing in mid-air for long periods of time. For this configuration, we now have two boards in the MR world: a horizontal drafting board used for writing and drawing, and a vertical board that displays all information seen by all collaborators. All content is duplicated onto the vertical board. A cursor on the vertical board corresponds to the position of the user's hand on the horizontal board. This way, the person using the horizontal board need not look downward, remaining free to look at the vertical content board and other people. This frees users to pay more attention to the environment and each other in a shared experience. The configuration can extend 1) and 2) since we can choose where to place the vertical duplicate board.
+while resting their arms atop a horizontal surface in the real world (e.g. table), thereby avoiding the potential fatigue of drawing in mid-air for long periods of time. For this configuration, we now have two boards in the MR world: a horizontal drafting board used for writing and drawing, and a vertical board that displays all information seen by all people in a group to see. All content is duplicated onto the vertical board. A cursor on the vertical board corresponds to the position of the user's hand on the horizontal board. This way, the person using the horizontal board need not look downward, remaining free to look at the vertical content board and other people. This allows users to pay more attention to the environment and each other in a shared experience. The configuration can extend 1) and 2) since we can choose where to place the vertical duplicate board.
 
 \textit{The MR System.} Our system comprises 1) a content creation server, 2) an internal network framework and 3) VR/MR clients (see figure~\ref{fig:datapipeline} for a detailed description). 1) To enable interactive content during communication, we chose Chalktalk as our content creation server (see figure~\ref{fig:expMatrix}). Chalktalk is a web browser-based 3D presentation and communication tool, 
 %written in JavaScript, 
@@ -262,7 +260,7 @@ The following lists the steps in the presentation:
 The three main discussion topics during the post-test interviews were "the feeling of one-to-one," "ability to shift focus smoothly" and "eye contact" (see questions in Table~\ref{tab:table2} and results in Figure~\ref{fig:results}). 
 
 \textit{One-to-one Experience.}
-Most participants felt the face-to-face experience created a feeling of one-to-one interaction with the presenter (6/8 agree or strongly agree).
+Most participants felt the face-to-face experience created a feeling of one-to-one interaction with the presenter (6/8 agree more than moderately).
 % TODO, despite the presence of another (non-rendered) audience member.
 P1(F): ``\textit{It felt like it was a one-on-one lesson even though there was more than one person there. It felt like the person [the presenter] was right in front of me.}''
 P1(F) contrasted the experience with a college lecture format in which the lecturer stands to the side, which she considered ``\textit{more distant.}'' 
@@ -270,12 +268,12 @@ Similarly, P4(F) thought it ``\textit{really felt like a private lesson}'' and t
 %P7(F) did not feel the presence of another audience member in the experience.
 
 \textit{Focus Shift.}
- Participants responded differently to the question concerning how often they shifted focus between content and the presenter (2/8 very rarely, 2/8 more or less rarely, 3/8 more or less frequently and 1/8 frequently). \zhenyi{Those who shifted focus least often (P2,M and P4,F) thought the presenter was always in the field of view and felt that they did not need to shift focus while looking at the content.} Most reported that they could follow both content (3/8 agree and 5/8 strongly agree) and the presenter (6/8 agree or strongly agree) well. This suggested that the focus shift between content and the presenter was smooth to some extent in the mirrored face-to-face configuration.
+ Participants responded differently to the question (Q4) concerning how often they shifted focus between content and the presenter (2/8 very rarely, 2/8 moderately rarely, 3/8 slightly frequently and 1/8 moderately frequently). \zhenyi{Those who shifted focus least often (P2,M and P4,F) thought the presenter was always in the field of view and felt they did not need to shift focus while looking at the content.} Most reported that they could follow both content(Q3) (5/8 strongly agree) and the presenter(Q2) (6/8 more than moderately agree) well. This suggested that the focus shift between content and the presenter was smooth to some extent in the mirrored face-to-face configuration.
 
 \textit{Eye Contact.}
 \karl{
 %Opinions differed on the necessity of eye contact. 
-Some participants did not always want eye contact. P5(M): ``\textit{you don't want the presenter to be always looking at you.}'' Others like P4(F) felt it was necessary: ``\textit{I look at the professor the whole time. That's the only way I can pay attention.}'' Those who preferred less eye contact (6/8 reported eye contact less than rarely) admitted they felt the presenter was looking at them frequently, but chose to look at the content instead of the presenter. Participants who preferred to have eye contact reported having it more often (2/8 more than half the time). This suggests that our mirrored face-to-face configuration supports eye contact well and that the users chose whether to make eye contact or not.
+Some participants did not always want eye contact. P5(M): ``\textit{you don't want the presenter to be always looking at you.}'' Others like P4(F) felt it was necessary: ``\textit{I look at the professor the whole time. That's the only way I can pay attention.}'' Those who preferred less eye contact (6/8 reported eye contact less than slightly rarely) admitted they felt the presenter was looking at them frequently, but chose to look at the content instead of the presenter. Participants who preferred to have eye contact reported having it more often (2/8 more than half the time). This suggests that our mirrored face-to-face configuration supports eye contact well and that the users chose whether to make eye contact or not.
 }
 
 %\textit{Eye Contact.}
@@ -314,6 +312,7 @@ investigate which configurations are best suited to communication experiences in
 %\end{sidebar}
 
 \begin{margintable}
+\vspace{-3cm}
     \caption{Questions in Questionnaire}
     \label{tab:table2}
     \begin{tabular}{p{5.5cm}}
@@ -328,8 +327,8 @@ investigate which configurations are best suited to communication experiences in
 \end{margintable}
 
 \begin{marginfigure}
-    \includegraphics[width=\marginparwidth]{lr}
-    \caption{Results for Questionnaire. Each dot $\left(\cdot\right)$ represents one participant on a 7-point Likert scale.}
+    \includegraphics[width=0.9\marginparwidth]{lr2}
+    \caption{Results for the 7-point Likert scale Questionnaire}
     \label{fig:results}
 \end{marginfigure}
 
