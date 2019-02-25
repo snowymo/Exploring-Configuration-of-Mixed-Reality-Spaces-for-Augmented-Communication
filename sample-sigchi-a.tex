@@ -3,6 +3,7 @@
 \usepackage{ccicons}  % For Creative Commons citation icons
 
 \begin{document}
+\fancyhead{}
 % Copyright
 \copyrightyear{2019} 
 \acmYear{2019} 
@@ -10,7 +11,7 @@
 \acmConference[CHI'19 Extended Abstracts] {CHI Conference on Human Factors in Computing Systems Extended Abstracts}{May 4--9, 2019}{Glasgow, Scotland UK}
 % Note UK should be in caps
 \acmBooktitle{CHI Conference on Human Factors in Computing Systems Extended Abstracts (CHI'19 Extended Abstracts), May 4--9, 2019, Glasgow, Scotland UK}
-\acmPrice{15.00}
+\acmPrice{}
 \acmISBN{978-1-4503-5971-9/19/05}
 \acmDOI{10.1145/3290607.3312761}
 % Authors, replace the red X's with your assigned DOI string during the rightsreview eform process.
@@ -208,9 +209,9 @@ on the same side of the content board and mirror all other users (from one user'
 
 For 3), instead of writing or drawing in mid-air, users can create content in MR
 %by writing 
-while resting their arms atop a horizontal surface in the real world (e.g. table), thereby avoiding the potential fatigue of drawing in mid-air for long periods of time. For this configuration, we now have two boards in the MR world: a horizontal drafting board used for writing and drawing, and a vertical board that displays all information seen by all people in a group to see. All content is duplicated onto the vertical board. A cursor on the vertical board corresponds to the position of the user's hand on the horizontal board. This way, the person using the horizontal board need not look downward, remaining free to look at the vertical content board and other people. This allows users to pay more attention to the environment and each other in a shared experience. The configuration can extend 1) and 2) since we can choose where to place the vertical duplicate board.
+while resting their arms atop a horizontal surface in the real world (e.g. table), thereby avoiding the potential fatigue of drawing in mid-air for long periods of time. For this configuration, we now have two boards in the MR world: a horizontal drafting board used for writing and drawing, and a vertical board that displays all information to be seen by all people in a group. All content is duplicated onto the vertical board. A cursor on the vertical board corresponds to the position of the user's hand on the horizontal board. This way, the person using the horizontal board need not look downward, remaining free to look at the vertical content board and other people. This allows users to pay more attention to the environment and each other in a shared experience. The configuration can extend 1) and 2) since we can choose where to place the vertical duplicate board.
 
-\textit{The MR System.} Our system comprises 1) a content creation server, 2) an internal network framework and 3) VR/MR clients (see figure~\ref{fig:datapipeline} for a detailed description). 1) To enable interactive content during communication, we chose Chalktalk as our content creation server (see figure~\ref{fig:expMatrix}). Chalktalk is a web browser-based 3D presentation and communication tool, 
+\textit{The MR System.} Our system comprises 1) a content creation server, 2) an internal network framework and 3) VR/MR clients (see figure~\ref{fig:datapipeline} for a detailed description). 1) To enable interactive content during communication, we chose Chalktalk as our content creation server (see figure~\ref{fig:expMatrix}). Chalktalk is a web browser-based 3D presentation and communication tool
 %written in JavaScript, 
 in which the user draws interactive "sketches" for presentation. We designed a generic data serialization protocol to connect and decouple the content creation server and the VR/MR clients, so alternative content could easily be plugged in.
 %to the system. 
@@ -226,7 +227,7 @@ It synchronizes data across devices and supports custom data formats.
 \begin{marginfigure}
     \includegraphics[height = 2.5cm]{3d.png}
     \includegraphics[height = 2.5cm]{experimentMatrix.png}
-    \caption{Left: The content board is 3D. Right: screenshot from experiment with matrix presentation.}
+    \caption{Left: The content board is 3D. Right: Screenshot from experiment with matrix presentation.}
     \label{fig:expMatrix}
 \end{marginfigure}
 
@@ -234,7 +235,7 @@ We plan to conduct experiments for each configuration design and to compare the 
 %, including undergraduate and graduate computer science and art students from New York University studying either Computer Science or Art and Design. 
 Participants were required to have taken a linear algebra class and to have prior experience with VR/MR. First, we introduced Chalktalk to participants who were unfamiliar with it to reduce the novelty effect. Then we gave a presentation on matrix transformations (a concept in the computer graphics curriculum, see figure~\ref{fig:expMatrix} and sidebar ~\ref{sidebar:matrix}) using our system in the mirrored face-to-face configuration. For each session, we had 1 presenter and 2 study participants in the audience, all physically remote. The presentation was repeated 4 times for 8 participants in all.
 %\karl{To create a realistic presentation, we invited a computer graphics professor to present a lesson on matrices, and he permitted us to use his presentation as the basis for our experiment (see the rationale for our choice in topic and the steps in the presentation in sidebar ~\ref{sidebar:matrix}). }
-We ran the experience with Oculus Rift headsets. Upon completion of all sessions, participants answered a questionnaire that gauged their opinions on one-to-one interaction~\cite{Lanir2008ClassroomPresentationSoftware}, eye contact~\cite{InsaPositionInClassroom} and focus shift~\cite{buxton1992telepresence} during the experience. Participants then joined a semi-structured exit interview. All factors were evaluated using the 7-pt Likert scale. The study was recorded with users' permission.
+We ran the experience with Oculus Rift headsets. Upon completion of all sessions, participants answered a questionnaire that gauged their opinions on one-to-one interaction~\cite{Lanir2008ClassroomPresentationSoftware}, eye contact~\cite{InsaPositionInClassroom} and focus shift~\cite{buxton1992telepresence} during the experience. Participants then joined a semi-structured exit interview. All factors were evaluated using the 7-point Likert scale. The study was recorded with users' permission.
 
 % We chose the topic of matrix transformations so participants could see and interact with 3D moving content. For content within the 3D immersive environment, we chose visualization of the way a matrix translates and rotates geometry. To create a realistic presentation, we invited a computer graphics professor at our university to present on the subject (see detailed steps in sidebar~\ref{sidebar:matrix}), and he permitted us to use a recording of this sample presentation as the basis for our experiment. During the experiment, the presenter also made gestures and moved content around the MR space.
 
@@ -246,8 +247,8 @@ For content within the 3D immersive environment, we chose visualization of the w
 During the lecture the presenter demonstrated matrix transformations, including translation and rotation, by using 3D interactive visualizations from the content server. Then she showed that matrix operations are non-commutative.
 The following lists the steps in the presentation:
 \begin{enumerate}
-  \item The presenter creates a 4x4 matrix object and links it to geometry. 
-  \item Modifying the matrix values rotates the geometry in 3D space, and students are invited to walk around the MR environment to observe from any angle. 
+  \item The presenter creates a 4x4 rotation matrix object and links geometry to it. 
+  \item Modifying the matrix values rotates the geometry in 3D space. Students are invited to walk around the MR environment to observe from any angle. 
   \item The presenter creates a second 4x4 matrix for translation, which she composes with the rotation matrix.
   \item To demonstrate that matrices are non-commutative, she shows that by changing the order in which the translation and rotation matrices are applied, the geometry's position and rotation change visibly with the same matrix values.
   \end{enumerate}
@@ -328,7 +329,7 @@ investigate which configurations are best suited to communication experiences in
 
 \begin{marginfigure}
     \includegraphics[width=0.9\marginparwidth]{lr2}
-    \caption{Results for the 7-point Likert scale Questionnaire}
+    \caption{Results for the 7-point Likert Scale Questionnaire}
     \label{fig:results}
 \end{marginfigure}
 
